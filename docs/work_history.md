@@ -118,3 +118,6 @@
 - В commit попали только allow-list файлы: журналы, README, Java-исходники `CcbSqlPlanRunner`, `PackageDdlExporter`, `TableDdlExporter`, `tnsnames.example.txt`, `OPTIMIZATION_NOTES.md`.
 - Попытка `git push -u origin ccb-utils-sync` из Codex-среды не прошла: Git Credential Manager не смог интерактивно запросить credentials (`/dev/tty` недоступен), также было сообщение `ServicePointManager не поддерживает прокси со схемой socks5`.
 - Для продолжения нужно выполнить push из обычного интерактивного PowerShell/Git Bash под пользователем Windows или предварительно авторизовать Git Credential Manager.
+- Пользователь выполнил интерактивный `git push -u origin ccb-utils-sync` из Windows PowerShell, авторизация через browser/GCM прошла успешно.
+- По подтверждению пользователя старый `main` без backup был заменен содержимым `ccb-utils-sync`: `git push origin ccb-utils-sync:main --force-with-lease`.
+- Проверка после force-with-lease: `origin/main` указывает на тот же commit, что и `origin/ccb-utils-sync`; старые `Reports/` и `Scripts/` из прежнего main отсутствуют; `tnsnames.txt`, `*.class`, `runs/`, `test_output`, рабочие `*.sql`, `package_list.txt`, `table_list.txt` в новый `main` не попали.

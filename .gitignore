@@ -1,0 +1,39 @@
+# Default-deny policy for GitHub sync.
+# Ignore everything unless explicitly allowed below.
+*
+
+# Root metadata
+!.gitignore
+
+# Project docs
+!docs/
+!docs/*.md
+
+# CcbSqlPlanRunner utility
+!UTILS/
+!UTILS/CcbSqlPlanRunner/
+!UTILS/CcbSqlPlanRunner/README.md
+
+!UTILS/CcbSqlPlanRunner/src/
+!UTILS/CcbSqlPlanRunner/src/*.java
+
+!UTILS/CcbSqlPlanRunner/docs/
+!UTILS/CcbSqlPlanRunner/docs/optimization_history.md
+
+!UTILS/CcbSqlPlanRunner/config/
+!UTILS/CcbSqlPlanRunner/config/tnsnames.example.txt
+
+!UTILS/CcbSqlPlanRunner/sql/
+!UTILS/CcbSqlPlanRunner/sql/*/
+!UTILS/CcbSqlPlanRunner/sql/*/OPTIMIZATION_NOTES.md
+
+# DDL exporter utilities
+!UTILS/PackageDdlExporter/
+!UTILS/PackageDdlExporter/*.java
+!UTILS/PackageDdlExporter/*.md
+!UTILS/PackageDdlExporter/*.bat
+
+!UTILS/TableDdlExporter/
+!UTILS/TableDdlExporter/*.java
+!UTILS/TableDdlExporter/*.md
+!UTILS/TableDdlExporter/*.bat

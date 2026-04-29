@@ -1,0 +1,18 @@
+# Example connection file for CcbSqlPlanRunner.
+# Copy to tnsnames.txt locally and fill real values.
+# Never commit tnsnames.txt with real credentials.
+
+user=READONLY_CCB
+password=CHANGE_ME
+owner=CISADM
+
+CCB_DB_ALIAS =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = db-host.example.local)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = SERVICE_NAME)
+    )
+  )
